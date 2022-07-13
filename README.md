@@ -1,16 +1,25 @@
 # todo
 
-A new Flutter project.
+## Seja bem vindo
 
-## Getting Started
+👋 Olá, seja bem vindo.
 
-This project is a starting point for a Flutter application.
+## Curso
 
-A few resources to get you started if this is your first Flutter project:
+💻 Projeto da carreira Desenvolvedor Mobile FLutter: Criando Apps nativas escaláveis com Flutter, BloC e Provider do professor André Baltieri (Balta) na plataforma balta.io.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Escopo
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+📚 Neste curso, Neste projeto, eu vou ter a oportunidade de aprender a criar um App, utilizando o Framework Flutter, Mobx e MVC. Para autenticação, irei usar o Firebase com o servidor. O consumo da API é feito em Asp.Net Core.
+
+## Foco
+
+😊 O curso é focado no desenvolvimento de um App com separação da regra de negócio, utilizando Mobx.
+
+## Prazo
+
+⚡ Este projeto foi iniciado no dia 12/07/2022. No entanto, neste momento eu não tenho uma previssão para finalizar o mesmo.
+
+## Imagens
+
+:camera: Neste momento, eu não possuo imagens, no entanto, em breve irei disponibilizar.
