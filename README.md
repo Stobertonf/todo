@@ -6,7 +6,7 @@
 
 ## Curso
 
-💻 Projeto da carreira Desenvolvedor Mobile FLutter: Criando Apps nativas escaláveis com Flutter, BloC e Provider do professor André Baltieri (Balta) na plataforma balta.io.
+💻 Projeto da carreira Desenvolvedor Mobile FLutter: Todo App: Mobile com Flutter, MobX e Firebase do professor André Baltieri (Balta) na plataforma balta.io.
 
 ## Escopo
 
