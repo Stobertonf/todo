@@ -18,7 +18,7 @@
 
 ## Prazo
 
-⚡ Este projeto foi iniciado no dia 12/07/2022. No entanto, neste momento eu não tenho uma previssão para finalizar o mesmo.
+⚡ Este projeto foi iniciado no dia 12/07/2022. No entanto, neste momento eu não tenho uma previsão para finalizar o mesmo.
 
 ## Imagens
 
