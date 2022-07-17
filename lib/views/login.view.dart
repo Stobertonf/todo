@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo/views/home.view.dart';
+import 'package:todo/widgets/busy.widget.dart';
 import '../controllers/login.controller.dart';
 import 'package:todo/components/button.widget.dart';
 
@@ -36,7 +37,7 @@ class _LoginViewState extends State<LoginView> {
   }
 
   onError() {
-    var snackbar = new SnackBar(content: new Text("Falha no login"));
+    var snackbar = const SnackBar(content: Text("Falha no login"));
     // ignore: deprecated_member_use
     scaffoldKey.currentState?.showSnackBar(snackbar);
   }
@@ -54,37 +55,41 @@ class _LoginViewState extends State<LoginView> {
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(30),
-          child: busy == true
-              ? const CircularProgressIndicator()
-              : Card(
-                  child: Column(
-                    children: <Widget>[
-                      const SizedBox(
-                        width: double.infinity,
-                      ),
-                      Image.asset(
-                        "assets/images/notification.png",
-                        width: 250,
-                      ),
-                      const Text(
-                        "Olá desconhecido",
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      TDButton(
-                          text: "Login com Google",
-                          image: "assets/images/google.png",
-                          callback: () {}),
-                      const SizedBox(
-                        height: 40,
-                      ),
-                    ],
+          child: TDBusy(
+            busy: busy,
+            child: Card(
+              child: Column(
+                children: <Widget>[
+                  const SizedBox(
+                    width: double.infinity,
                   ),
-                ),
+                  Image.asset(
+                    "assets/images/notification.png",
+                    width: 250,
+                  ),
+                  const Text(
+                    "Olá desconhecido",
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  TDButton(
+                    text: "Login com Google",
+                    image: "assets/images/google.png",
+                    callback: () {
+                      handleSignIn();
+                    },
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                ],
+              ),
+            ),
+          ),
         ),
       ),
     );
