@@ -50,6 +50,7 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(30),
