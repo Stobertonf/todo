@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo/views/home.view.dart';
 import '../controllers/login.controller.dart';
 import 'package:todo/components/button.widget.dart';
 
@@ -25,7 +26,15 @@ class _LoginViewState extends State<LoginView> {
     });
   }
 
-  onSuccess() {}
+  onSuccess() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const HomeView(),
+      ),
+    );
+  }
+
   onError() {}
   onComplete() {}
 
