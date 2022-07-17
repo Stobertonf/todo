@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
 
 class TDBusy extends StatelessWidget {
-  const TDBusy({Key? key}) : super(key: key);
+  bool busy = false;
+  Widget child;
+
+  TDBusy({
+    required this.busy,
+    required this.child,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return busy
+        ? Container(
+            child: const Center(
+              child: CircularProgressIndicator(),
+            ),
+          )
+        : child;
   }
 }
