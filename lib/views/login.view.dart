@@ -41,7 +41,11 @@ class _LoginViewState extends State<LoginView> {
     scaffoldKey.currentState?.showSnackBar(snackbar);
   }
 
-  onComplete() {}
+  onComplete() {
+    setState(() {
+      busy = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
