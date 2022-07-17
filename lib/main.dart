@@ -14,14 +14,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: const <Widget>[
-          UserCard(),
-          NavBar(),
-          CreateTodoView(),
-        ],
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Todos',
+      theme: appTheme(),
+      home: LoginView(),
     );
   }
 }
