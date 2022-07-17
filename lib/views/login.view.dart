@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../controllers/login.controller.dart';
 import 'package:todo/components/button.widget.dart';
 
 class LoginView extends StatefulWidget {
@@ -7,6 +8,27 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
+  var busy = false;
+  final controller = new LoginController();
+  final scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  handleSignIn() {
+    setState(() {
+      busy = true;
+    });
+    controller.login().then((data) {
+      onSuccess();
+    }).catchError((err) {
+      onError();
+    }).whenComplete(() {
+      onComplete();
+    });
+  }
+
+  onSuccess() {}
+  onError() {}
+  onComplete() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
