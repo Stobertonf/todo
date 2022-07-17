@@ -35,7 +35,12 @@ class _LoginViewState extends State<LoginView> {
     );
   }
 
-  onError() {}
+  onError() {
+    var snackbar = new SnackBar(content: new Text("Falha no login"));
+    // ignore: deprecated_member_use
+    scaffoldKey.currentState?.showSnackBar(snackbar);
+  }
+
   onComplete() {}
 
   @override
