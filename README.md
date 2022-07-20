@@ -10,7 +10,7 @@
 
 ## Escopo
 
-📚 Neste curso, Neste projeto, eu vou ter a oportunidade de aprender a criar um App, utilizando o Framework Flutter, Mobx e MVC. Para autenticação, irei usar o Firebase com o servidor. O consumo da API é feito em Asp.Net Core.
+📚 Neste curso, eu vou ter a oportunidade de aprender a criar um App com funcionalidades avançadas utilizando o Framework Flutter. Para Gestão de Estado local e global irei usar o MobX, irei implementar o Padrão MVC e Repository Pattern com Dart. Além disso, irei aprender a realizar requisições HTTP com Flutter e a biblioteca DIO, comunicação com API e carregar Widgets dependendo do usuário logado em Flutter. Para autenticação, irei usar o Firebase com o servidor. O consumo da API é feito em Asp.Net Core.
 
 ## Foco
 
