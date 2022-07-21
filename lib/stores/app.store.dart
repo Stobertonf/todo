@@ -1,17 +1,20 @@
+part 'app.store.g.dart';
 import 'package:mobx/mobx.dart';
 import 'package:todo/models/todo-item.model.dart';
-part 'app.store.g.dart';
 
 class AppStore = _AppStore with _$AppStore;
 
+//Conceitos de orientação a objetos.
+//Classe Abstrada só pode ser herdada, mas Não pode ser instanciada.
 abstract class _AppStore with Store {
-  @observable
+  @observable //Não precisa colocar o tipo (string etc). usado para variáveis normais
   String currentState = "none";
 
   @observable
   bool busy = false;
 
   @observable
+  //List  observables
   ObservableList<TodoItem> todos = new ObservableList<TodoItem>();
 
   @action
