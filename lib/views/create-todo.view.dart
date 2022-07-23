@@ -9,21 +9,19 @@ import 'package:todo/widgets/user-card.widget.dart';
 import 'package:todo/controllers/todo.controller.dart';
 
 class CreateTodoView extends StatefulWidget {
-  const CreateTodoView({Key? key}) : super(key: key);
-
   @override
-  State<CreateTodoView> createState() => _CreateTodoViewState();
+  _CreateTodoViewState createState() => _CreateTodoViewState();
 }
 
 class _CreateTodoViewState extends State<CreateTodoView> {
   final _formKey = GlobalKey<FormState>();
-  final _dateFormat = DateFormat('dd/MM/yyyy');
+  final _dateFormat = new DateFormat('dd/MM/yyyy');
 
   String task = "";
   DateTime date = DateTime.now();
 
   Future<Null> _selectDate(BuildContext context) async {
-    final DateTime? picked = await showDatePicker(
+    final DateTime picked = await showDatePicker(
       context: context,
       initialDate: date,
       firstDate: DateTime(2000, 1),
