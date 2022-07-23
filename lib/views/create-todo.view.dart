@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:todo/components/button.widget.dart';
 import 'package:todo/widgets/user-card.widget.dart';
 
-class CreateTodoView extends StatelessWidget {
+class CreateTodoView extends StatefulWidget {
   const CreateTodoView({Key? key}) : super(key: key);
 
+  @override
+  State<CreateTodoView> createState() => _CreateTodoViewState();
+}
+
+class _CreateTodoViewState extends State<CreateTodoView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
