@@ -12,6 +12,9 @@ class TodoList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final store = Provider.of<AppStore>(context);
+    final controller = new TodoController(store);
+
     return Observer(
       builder: (_) => TDBusy(
         busy: store.busy,
@@ -50,7 +53,7 @@ class TodoList extends StatelessWidget {
                                 Text("Deseja concluir a tarefa ${todo.title}?"),
                             actions: <Widget>[
                               FlatButton(
-                                child: new Text("Cancelar"),
+                                child: const Text("Cancelar"),
                                 onPressed: () {
                                   Navigator.of(context).pop();
                                 },
@@ -66,9 +69,8 @@ class TodoList extends StatelessWidget {
                                   controller.markAsDone(todo).then((data) {
                                     Navigator.of(context).pop();
                                   }).catchError((err) {
-                                    var snackbar = new SnackBar(
-                                      content:
-                                          const Text("Ops, algo deu errado!"),
+                                    var snackbar = const SnackBar(
+                                      content: Text("Ops, algo deu errado!"),
                                     );
                                     Scaffold.of(context).showSnackBar(snackbar);
                                   });
