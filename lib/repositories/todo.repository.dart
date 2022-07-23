@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'package:todo/user.dart';
 import 'package:dio/dio.dart';
+import 'package:todo/user.dart';
 import 'package:todo/models/todo-item.model.dart';
 
 class TodoRepository {
@@ -20,16 +20,20 @@ class TodoRepository {
     Response response = await Dio().get(
       url,
       options: Options(
-        headers: {HttpHeaders.authorizationHeader: 'Bearer ${user.token}'},
+        headers: {
+          HttpHeaders.authorizationHeader:
+              'Bearer ${user.token}', //Tipo de autorização da API.
+        },
       ),
     );
     return (response.data as List)
-        .map((todos) => TodoItem.fromJson(todos))
+        .map((todos) => TodoItem.fromJson(
+            todos)) //Convertando para TodoItem e gerar um list para tela.
         .toList();
   }
 
   Future<List<TodoItem>> getTomorrowTodos() async {
-    var url = "https://10.0.2.2:5001/v1/todos/undone/tomorrow";
+    var url = "https://10.0.2.2:5001/v1/todos/undone/tomorrow"; //url
     Response response = await Dio().get(
       url,
       options: Options(
@@ -42,7 +46,7 @@ class TodoRepository {
   }
 
   Future<List<TodoItem>> getAll() async {
-    var url = "https://10.0.2.2:5001/v1/todos";
+    var url = "https://10.0.2.2:5001/v1/todos"; //url
     Response response = await Dio().get(
       url,
       options: Options(
