@@ -25,7 +25,7 @@ class HomeView extends StatelessWidget {
           NavBar(),
           Expanded(
             child: Container(
-              child: const TodoList(),
+              child: TodoList(),
             ),
           ),
         ],
