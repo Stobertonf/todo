@@ -1,14 +1,25 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/stores/app.store.dart';
 import 'package:todo/themes/app.theme.dart';
 import 'package:todo/views/login.view.dart';
-import 'package:todo/widgets/navbar.widget.dart';
-import 'package:todo/views/create-todo.view.dart';
-import 'package:todo/widgets/user-card.widget.dart';
+
+// Esta classe permite acesso ao LocalHost com certificados HTTPS inválidos
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext context) {
+    HttpClient client = super.createHttpClient(context);
+    client.badCertificateCallback =
+        (X509Certificate cert, String host, int port) => true;
+    return client;
+  }
+}
 
 void main() {
-  runApp(const MyApp());
+  HttpOverrides.global = new MyHttpOverrides();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
