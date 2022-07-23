@@ -4,7 +4,7 @@ import 'package:todo/stores/app.store.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:todo/controllers/todo.controller.dart';
 
-class Navbar extends StatelessWidget {
+class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final store = Provider.of<AppStore>(context);
