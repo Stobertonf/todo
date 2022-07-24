@@ -18,7 +18,7 @@
 
 ## Prazo
 
-⚡ Este projeto foi iniciado no dia 12/07/2022. No entanto, neste momento eu não tenho uma previsão para finalizar o mesmo.
+⚡ Este projeto foi finalizado no dia 23/07/2022. E agora irei fazer o último curso para finalizar a carreira de Mobile Developer Flutter no site balta.io.
 
 ## Imagens
 
