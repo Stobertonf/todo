@@ -10,7 +10,7 @@
 
 ## Escopo
 
-📚 Neste curso, Neste projeto, eu vou ter a oportunidade de aprender a criar um App, utilizando o Framework Flutter, Mobx e MVC. Para autenticação, irei usar o Firebase com o servidor. O consumo da API é feito em Asp.Net Core.
+📚 Neste curso / Neste projeto, eu vou ter a oportunidade de aprender a criar um App, utilizando o Framework Flutter, Mobx e MVC. Para autenticação, irei usar o Firebase com o servidor. O consumo da API é feito em Asp.Net Core.
 
 ## Foco
 
